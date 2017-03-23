@@ -48,7 +48,8 @@ node["apache"]["sites"].each do |sitename, data| #irá ler os atributos definido
     mode "0644"
     variables(
       :site_title => data["site_title"],
-      :commingsoon => "Em breve"
+      :commingsoon => "Em breve",
+      :author_name => node["author"]["name"]
     )
   end
 end
